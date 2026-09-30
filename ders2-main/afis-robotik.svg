@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" width="100%" height="100%" style="background-color: #2D1137; font-family: 'Times New Roman', Georgia, serif;">
+  <!-- Dış Altın Çerçeve -->
+  <rect x="25" y="25" width="450" height="600" fill="none" stroke="#E6C280" stroke-width="2"/>
+  <rect x="30" y="30" width="440" height="590" fill="none" stroke="#E6C280" stroke-width="1"/>
+
+  <!-- Üst Başlık -->
+  <text x="250" y="105" text-anchor="middle" fill="#E6C280" font-size="18" font-weight="bold" letter-spacing="2">SDÜ KAMPÜS ETKİNLİK</text>
+
+  <!-- İkon Logosu -->
+  <g transform="translate(250, 240)">
+    <circle cx="0" cy="0" r="65" fill="none" stroke="#E6C280" stroke-width="3"/>
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#E6C280" stroke-width="3"/>
+    <circle cx="0" cy="0" r="6" fill="#E6C280"/>
+    <!-- Yön Okları / Sembol -->
+    <polygon points="0,-32 -8,-20 8,-20" fill="#E6C280"/>
+    <polygon points="0,32 -8,20 8,20" fill="#E6C280"/>
+    <polygon points="-32,0 -20,-8 -20,8" fill="#E6C280"/>
+    <polygon points="32,0 20,-8 20,8" fill="#E6C280"/>
+  </g>
+
+  <!-- Ana Etkinlik Başlığı -->
+  <text x="250" y="375" text-anchor="middle" fill="#FFFFFF" font-size="38" font-weight="bold">Robotik</text>
+  <text x="250" y="425" text-anchor="middle" fill="#FFFFFF" font-size="38" font-weight="bold">Atölyesi</text>
+
+  <!-- Ayraç Çizgi -->
+  <line x1="160" y1="455" x2="340" y2="455" stroke="#E6C280" stroke-width="2"/>
+
+  <!-- Tarih ve Yer -->
+  <text x="250" y="495" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="bold" font-family="sans-serif">20 Ekim 2026 · 10:00</text>
+  <text x="250" y="525" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="bold" font-family="sans-serif">Lab 2</text>
+
+  <!-- Kontenjan -->
+  <text x="250" y="585" text-anchor="middle" fill="#E6C280" font-size="14" font-family="sans-serif">Kontenjan: 60 kişi</text>
+</svg>

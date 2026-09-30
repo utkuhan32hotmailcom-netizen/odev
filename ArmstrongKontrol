@@ -1,0 +1,27 @@
+public class ArmstrongKontrol {
+
+    public static boolean armstrongMu(int sayi) {
+        if (sayi < 100 || sayi > 999) {
+            // Üç basamaklı değilse false döndür
+            return false;
+        }
+
+        int yuzler = sayi / 100;
+        int onlar = (sayi / 10) % 10;
+        int birler = sayi % 10;
+
+        int toplam = (int)(Math.pow(yuzler, 3)) + (int)(Math.pow(onlar, 3)) + (int)(Math.pow(birler, 3));
+
+        return toplam == sayi;
+    }
+
+    public static void main(String[] args) {
+        int sayi = 371;  // Örnek sayı
+        if (armstrongMu(sayi)) {
+            System.out.println(sayi + " bir Armstrong sayıdır.");
+        } else {
+            System.out.println(sayi + " bir Armstrong sayı değildir.");
+        }
+    }
+}
+

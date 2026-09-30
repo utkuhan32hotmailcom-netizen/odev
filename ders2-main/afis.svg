@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 650" width="100%" height="100%" style="background-color: #8B2500; font-family: 'Times New Roman', Georgia, serif;">
+  <!-- Dış Altın Çerçeve -->
+  <rect x="25" y="25" width="450" height="600" fill="none" stroke="#DAA520" stroke-width="2"/>
+  <rect x="30" y="30" width="440" height="590" fill="none" stroke="#DAA520" stroke-width="1"/>
+
+  <!-- Üst Başlık -->
+  <text x="250" y="90" text-anchor="middle" fill="#FFD700" font-size="16" font-weight="bold" letter-spacing="2">SÜLEYMAN DEMİREL ÜNİVERSİTESİ</text>
+  <text x="250" y="115" text-anchor="middle" fill="#FFD700" font-size="16" font-weight="bold" letter-spacing="2">KAMPÜS ETKİNLİK</text>
+
+  <!-- Pusula Logosu -->
+  <g transform="translate(250, 240)">
+    <circle cx="0" cy="0" r="65" fill="none" stroke="#FFD700" stroke-width="3"/>
+    <!-- Pusula Yıldızı -->
+    <path d="M 0,-55 L 12,-12 L 55,0 L 12,12 L 0,55 L -12,12 L -55,0 L -12,-12 Z" fill="#FFD700" stroke="#8B2500" stroke-width="1"/>
+    <path d="M 0,-55 L 0,0 L 55,0 Z" fill="#DAA520"/>
+    <path d="M 0,55 L 0,0 L -55,0 Z" fill="#DAA520"/>
+    <path d="M -12,-12 L 0,0 L 0,-55 Z" fill="#FFF8DC"/>
+    <path d="M 12,12 L 0,0 L 0,55 Z" fill="#FFF8DC"/>
+  </g>
+
+  <!-- Ana Etkinlik Başlığı -->
+  <text x="250" y="375" text-anchor="middle" fill="#FFFFFF" font-size="38" font-weight="bold">Kariyer</text>
+  <text x="250" y="425" text-anchor="middle" fill="#FFFFFF" font-size="38" font-weight="bold">Günleri 2026</text>
+
+  <!-- Ayraç Çizgi -->
+  <line x1="160" y1="455" x2="340" y2="455" stroke="#FFD700" stroke-width="2"/>
+
+  <!-- Tarih ve Yer -->
+  <text x="250" y="495" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="bold" font-family="sans-serif">30 Eylül 2026 · 10:57</text>
+  <text x="250" y="525" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="bold" font-family="sans-serif">A Blok Konferans Salonu</text>
+
+  <!-- Kontenjan -->
+  <text x="250" y="585" text-anchor="middle" fill="#FFD700" font-size="14" font-family="sans-serif">Kontenjan: 120 kişi</text>
+</svg>
