@@ -4,71 +4,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etkinlik Detayları</title>
-  <link rel="stylesheet" href="2311012074.css">
   <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Times New Roman", Georgia, serif; }
+
+    /* Her etkinlik tam ekran bir afiş */
+    .afis {
+      --zemin: #8B2500;
+      --altin: #FFD700;
+      --cerceve: #DAA520;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      background: var(--zemin);
+      color: #fff;
+    }
+    .afis.robotik { --zemin: #2D1137; --altin: #E6C280; --cerceve: #E6C280; }
+
+    .kart {
+      width: 100%;
+      min-height: calc(100vh - 28px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      border: 2px solid var(--cerceve);
+      outline: 1px solid var(--cerceve);
+      outline-offset: -8px;
+      text-align: center;
+    }
+    .ust {
+      margin: 0;
+      color: var(--altin);
+      font-size: clamp(1rem, 2.4vmin, 1.6rem);
+      font-weight: bold;
+      letter-spacing: 2px;
+      line-height: 1.6;
+    }
+    .logo { width: clamp(100px, 17vmin, 200px); height: auto; margin: 2.5vmin auto; display: block; }
+    h2 { margin: 0; font-size: clamp(2rem, 6.5vmin, 4.5rem); line-height: 1.2; }
+    .cizgi { width: clamp(180px, 30vmin, 360px); height: 2px; margin: 2.5vmin auto; background: var(--altin); border: 0; }
+    .bilgi {
+      margin: 0;
+      font: bold clamp(1.05rem, 2.6vmin, 1.8rem)/1.7 Arial, Helvetica, sans-serif;
+    }
+    .kontenjan {
+      margin: 2.5vmin 0 0;
+      color: var(--altin);
+      font: clamp(0.95rem, 2.4vmin, 1.5rem) Arial, Helvetica, sans-serif;
+    }
+    .geri {
+      display: inline-block;
+      margin-top: 3vmin;
+      padding: 10px 22px;
+      color: var(--altin);
+      border: 1px solid var(--altin);
+      font: bold 1rem Arial, Helvetica, sans-serif;
+      text-decoration: none;
+    }
+    .geri:hover, .geri:focus-visible { background: var(--altin); color: var(--zemin); }
+    .imza {
+      margin: 3vmin 0 0;
+      color: var(--altin);
+      font: clamp(0.9rem, 2.2vmin, 1.3rem) Arial, Helvetica, sans-serif;
+      letter-spacing: 1px;
+    }
+
     /* Linkten gelinen etkinliği göster, diğerini gizle */
-    main:has(article:target) article:not(:target) { display: none; }
+    body:has(.afis:target) .afis:not(:target) { display: none; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Etkinlik Detayları</h1>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="etkinlikler.html">Etkinlikler</a>
-      <a href="etkinlik-ekle.html">Ekle</a>
-      <a href="etkinlik-guncelle.html">Güncelle</a>
-    </nav>
-  </header>
-
   <main>
-    <article id="kariyer">
-      <h2>Kariyer Günleri 2026</h2>
+    <article class="afis" id="kariyer">
+      <div class="kart">
+        <p class="ust">SÜLEYMAN DEMİREL ÜNİVERSİTESİ<br>KAMPÜS ETKİNLİK</p>
 
-      <figure>
-        <img src="afis.svg" alt="Kariyer Günleri 2026 etkinlik afişi">
-        <figcaption>Şekil: Kariyer Günleri afişi</figcaption>
-      </figure>
+        <svg class="logo" viewBox="-70 -70 140 140" role="img" aria-label="Pusula logosu">
+          <circle r="65" fill="none" stroke="#FFD700" stroke-width="3"/>
+          <path d="M 0,-55 L 12,-12 L 55,0 L 12,12 L 0,55 L -12,12 L -55,0 L -12,-12 Z" fill="#FFD700" stroke="#8B2500"/>
+          <path d="M 0,-55 L 0,0 L 55,0 Z" fill="#DAA520"/>
+          <path d="M 0,55 L 0,0 L -55,0 Z" fill="#DAA520"/>
+          <path d="M -12,-12 L 0,0 L 0,-55 Z" fill="#FFF8DC"/>
+          <path d="M 12,12 L 0,0 L 0,55 Z" fill="#FFF8DC"/>
+        </svg>
 
-      <dl>
-        <dt>Tarih</dt>
-        <dd><time datetime="2026-10-12T14:00">12 Ekim 2026, 14:00</time></dd>
+        <h2>Kariyer<br>Günleri 2026</h2>
+        <hr class="cizgi">
+        <p class="bilgi"><time datetime="2026-10-12T14:00">12 Ekim 2026 · 14:00</time></p>
+        <p class="bilgi">A Blok Konferans Salonu</p>
+        <p class="kontenjan">Kontenjan: 120 kişi</p>
 
-        <dt>Yer</dt>
-        <dd>A Blok Konferans Salonu</dd>
-
-        <dt>Kontenjan</dt>
-        <dd>120</dd>
-      </dl>
-
-      <a href="etkinlikler.html">Listeye dön</a>
+        <a class="geri" href="etkinlikler.html">← Listeye dön</a>
+        <p class="imza">utku erdoğan 2311012074</p>
+      </div>
     </article>
 
-    <article id="robotik">
-      <h2>Robotik Atölyesi</h2>
+    <article class="afis robotik" id="robotik">
+      <div class="kart">
+        <p class="ust">SDÜ KAMPÜS ETKİNLİK</p>
 
-      <figure>
-        <img src="afis-robotik.svg" alt="Robotik Atölyesi etkinlik afişi">
-        <figcaption>Şekil: Robotik Atölyesi afişi</figcaption>
-      </figure>
+        <svg class="logo" viewBox="-70 -70 140 140" role="img" aria-label="Robotik logosu">
+          <circle r="65" fill="none" stroke="#E6C280" stroke-width="3"/>
+          <circle r="18" fill="none" stroke="#E6C280" stroke-width="3"/>
+          <circle r="6" fill="#E6C280"/>
+          <polygon points="0,-32 -8,-20 8,-20" fill="#E6C280"/>
+          <polygon points="0,32 -8,20 8,20" fill="#E6C280"/>
+          <polygon points="-32,0 -20,-8 -20,8" fill="#E6C280"/>
+          <polygon points="32,0 20,-8 20,8" fill="#E6C280"/>
+        </svg>
 
-      <dl>
-        <dt>Tarih</dt>
-        <dd><time datetime="2026-10-20T10:00">20 Ekim 2026, 10:00</time></dd>
+        <h2>Robotik<br>Atölyesi</h2>
+        <hr class="cizgi">
+        <p class="bilgi"><time datetime="2026-10-20T10:00">20 Ekim 2026 · 10:00</time></p>
+        <p class="bilgi">Lab 2</p>
+        <p class="kontenjan">Kontenjan: 40 kişi</p>
 
-        <dt>Yer</dt>
-        <dd>Lab 2</dd>
-
-        <dt>Kontenjan</dt>
-        <dd>40</dd>
-      </dl>
-
-      <a href="etkinlikler.html">Listeye dön</a>
+        <a class="geri" href="etkinlikler.html">← Listeye dön</a>
+        <p class="imza">utku erdoğan 2311012074</p>
+      </div>
     </article>
   </main>
-
-  <footer>
-    <p>utku erdoğan 2311012074</p>
-  </footer>
 </body>
 </html>
