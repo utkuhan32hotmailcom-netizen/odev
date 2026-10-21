@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etkinlik Detayları</title>
   <link rel="stylesheet" href="2311012074.css">
+  <style>
+    /* Linkten gelinen etkinliği göster, diğerini gizle */
+    main:has(article:target) article:not(:target) { display: none; }
+  </style>
 </head>
 <body>
   <header>
